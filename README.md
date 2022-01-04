@@ -72,9 +72,9 @@ create .env file from .env-copy and set up mail configuration
 MAIL_DRIVER = smtp  
 MAIL_HOST = smtp.gmail.com  
 MAIL_PORT = 587  
-MAIL_USERNAME = your-email-address
-MAIL_FROM_ADDRESS = your-email-address
-MAIL_PASSWORD = your-password
+MAIL_USERNAME = your-email-address  
+MAIL_FROM_ADDRESS = your-email-address  
+MAIL_PASSWORD = your-password  
 MAIL_ENCRYPTION = tls
 
 ## Installation 
