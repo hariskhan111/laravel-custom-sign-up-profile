@@ -69,7 +69,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 create .env file from .env-copy and set up mail configuration
 
-MAIL_DRIVER = smtp
+**MAIL_DRIVER = smtp**
 MAIL_HOST = smtp.gmail.com
 MAIL_PORT = 587
 MAIL_USERNAME = your-email-address
