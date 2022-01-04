@@ -73,7 +73,7 @@ User::created(function($user){
     ];
 
     Mail::to($user->email)->send(new InvitationMail($details));
-    $user->verification()->create([
+    $user->verification()->save(new UserVerificationCode([
         'code' => $six_digit_random_number
-    ]);
+    ]));
 });
