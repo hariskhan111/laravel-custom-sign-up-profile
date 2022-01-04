@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "d555c3e9-b0da-490d-9b75-78729056ed1c",
+		"name": "signup_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "invitation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"harriskhan891@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/invite",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"invite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"haris\",\r\n    \"email\":\"harriskhan891@gmail.com\",\r\n    \"password\":\"123qaz\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"haris\",\r\n    \"email\":\"harriskhan891@gmail.com\",\r\n    \"password\":\"123qaz\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login-user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify-email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "HqvEKUWP5gz1mCSPdio2uGX0Fldc1ADA697AEgN5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":7,\r\n    \"code\":826838\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/verify-email",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"verify-email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"type": "text",
+						"value": "HqvEKUWP5gz1mCSPdio2uGX0Fldc1ADA697AEgN5"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "username",
+							"value": "harris891",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "harris",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "harriskhan891@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "is_admin",
+							"value": "1",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/update-profile",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"update-profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
